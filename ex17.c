@@ -2,11 +2,14 @@
 #include <stdio.h>
 #include <malloc.h>
 
-typedef struct st_dados
+typedef struct st_lista
 {
     int numero;
-    struct st_dados *prox;
-}dados;
+    struct st_lista *prox;
+}lista;
+
+
+void inserir(lista **cabeca, int n1);
 
 int main(void)
 {
@@ -26,7 +29,7 @@ void inserir(lista **cabeca, int n1)
         pl=pl->prox;
     }
     pl=malloc(sizeof(lista));
-    pl->c=n1;
+    pl->numero=n1;
     pl->prox=NULL;
     if(plant!=NULL)
         plant->prox=pl;
