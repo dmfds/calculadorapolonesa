@@ -37,3 +37,25 @@ void inserir(lista **cabeca, int n1)
         *cabeca=pl;
 }
 
+
+int  remover(lista **cabeca, lista *r)
+{
+    lista *pl=*cabeca;
+    lista *plant=NULL;
+    if(r==NULL)
+        return;
+    while(pl!=NULL && pl!=r)
+    {
+        plant=pl;
+        pl=pl->prox;
+    }
+    if(pl==NULL)
+        return;
+    if(plant!=NULL)
+        plant->prox=pl->prox;
+    else
+        *cabeca=pl->prox;
+    free(pl);
+    return;
+}
+
