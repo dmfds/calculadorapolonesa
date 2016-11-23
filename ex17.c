@@ -8,7 +8,7 @@ typedef struct st_lista
     struct st_lista *prox;
 }lista;
 
-
+int  remover(lista **cabeca, lista *r);
 void inserir(lista **cabeca, int n1);
 
 int main(void)
