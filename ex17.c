@@ -17,9 +17,12 @@ int main(void)
     char y[MAX];
 
     printf("Calculadora polonesa\n");
+    printf("Se desejar sair da calculadora digite 's'\n");
 
     do{
-
+        printf(": ");
+        fgets(y,MAX,stdin);
+        
     }while()
     return EXIT_SUCCESS;
 }
