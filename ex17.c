@@ -30,6 +30,13 @@ int main(void)
                 printf("%d\n",num1+num2);
                 inserir(&cabeca,num1+num2);
                 break;
+            
+            case '-':
+                num1=remover(&cabeca);
+                num2=remover(&cabeca);
+                printf("%d\n",num1-num2);
+                inserir(&cabeca,num1-num2);
+                break;
 
         }
     }while()
