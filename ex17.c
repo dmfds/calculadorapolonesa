@@ -2,22 +2,24 @@
 #include <stdio.h>
 #include <string.h>
 
+#define MAX 100
+
 typedef struct st_lista
 {
     float numero;
     struct st_lista *prox;
 }lista;
 
-float remover(lista **cabeca);
-void inserir(lista **cabeca, float c);
-int tamanho(lista *cabeca);
-void exibir(lista *cabeca);
+float remover(lista **cabeca);/*retira o primeiro item na lista e retorna seu valor*/
+void inserir(lista **cabeca, float c);/*acrescenta o item no comeco da lsta*/
+int tamanho(lista *cabeca);/*retorna quantidade de itens na lista*/
+void exibir(lista *cabeca);/*mostra os itens na lista*/
 
 int main(void)
 {
     char peg;
-
-
+    /*loop no programa*/
+    /*saira quando o usuario colocar Y*/
     do
     {
         /*calculo();*/
