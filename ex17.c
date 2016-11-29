@@ -13,6 +13,11 @@ void inserir(lista **cabeca, int n1);
 
 int main(void)
 {
+    int num1, num2;
+    char y[MAX];
+
+    printf("Calculadora polonesa\n");
+
     do{
 
     }while()
