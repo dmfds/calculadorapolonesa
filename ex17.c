@@ -17,12 +17,20 @@ int main(void)
     char y[MAX];
 
     printf("Calculadora polonesa\n");
-    printf("Se desejar sair da calculadora digite 's'\n");
+    printf("Se desejar sair da calculadora digite 'y'\n");
 
     do{
         printf(": ");
         fgets(y,MAX,stdin);
+        switch(*y)
+        {
+            case '+':
+                num1=remover(&cabeca);
+                num2=remover(&cabeca);
+                printf("%d\n",num1+num2);
+                break;
         
+        }
     }while()
     return EXIT_SUCCESS;
 }
