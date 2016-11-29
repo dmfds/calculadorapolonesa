@@ -11,11 +11,12 @@ typedef struct st_lista
 float remover(lista **cabeca);
 void inserir(lista **cabeca, float c);
 int tamanho(lista *cabeca);
+void exibir(lista *cabeca);
 
 int main(void)
 {
     char peg;
- 
+
 
     do
     {
@@ -74,5 +75,19 @@ int tamanho(lista *cabeca)
         pp=pp->prox;
     }
     return cont;
+}
+
+void exibir(lista *cabeca)
+{
+    lista *cd=cabeca;
+
+    printf("\nResultado da operacao: ");
+    while(cd!=NULL)
+    {
+        printf("%.2f\n", cd->numero);
+        cd=cd->prox;
+    }
+
+    return;
 }
 
