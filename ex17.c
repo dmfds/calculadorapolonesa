@@ -38,6 +38,14 @@ int main(void)
                 inserir(&cabeca,num1-num2);
                 break;
 
+            case '/':
+                num1=remover(&cabeca);
+                num2=remover(&cabeca);
+                if(num1==0)
+                    printf("Divisao por zero\n");
+                printf("%d\n",num2/num1);
+                inserir(&cabeca,num2/num1);
+                break;
         }
     }while()
     return EXIT_SUCCESS;
