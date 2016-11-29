@@ -4,17 +4,17 @@
 
 typedef struct st_lista
 {
-    int numero;
+    float numero;
     struct st_lista *prox;
 }lista;
 
-int  remover(lista **cabeca, lista *r);
+float remover(lista **cabeca);
 void inserir(lista **cabeca, int num1);
 int tamanho(lista *cabeca);
 
 int main(void)
 {
-    int num1, num2;
+    float num1, num2;
     char y[MAX];
 
     printf("Calculadora polonesa\n");
@@ -82,25 +82,16 @@ void inserir(lista **cabeca, int num1)
 }
 
 
-int  remover(lista **cabeca, lista *r)
+float remover(lista **cabeca)
 {
-    lista *pl=*cabeca;
-    lista *plant=NULL;
-    if(r==NULL)
-        return;
-    while(pl!=NULL && pl!=r)
-    {
-        plant=pl;
-        pl=pl->prox;
-    }
-    if(pl==NULL)
-        return;
-    if(plant!=NULL)
-        plant->prox=pl->prox;
-    else
-        *cabeca=pl->prox;
-    free(pl);
-    return;
+
+    float valor=0;
+    lista *primeiro=*cabeca;
+
+    *cabeca=primeiro->prox;
+    valor=primeiro->numero;
+    free(primeiro);
+    return valor;
 }
 
 int tamanho(lista *cabeca)
