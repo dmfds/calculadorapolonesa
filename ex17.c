@@ -10,6 +10,7 @@ typedef struct st_lista
 
 int  remover(lista **cabeca, lista *r);
 void inserir(lista **cabeca, int num1);
+int tamanho(lista *cabeca);
 
 int main(void)
 {
@@ -30,7 +31,7 @@ int main(void)
                 printf("%d\n",num1+num2);
                 inserir(&cabeca,num1+num2);
                 break;
-            
+
             case '-':
                 num1=remover(&cabeca);
                 num2=remover(&cabeca);
@@ -46,7 +47,7 @@ int main(void)
                 printf("%d\n",num2/num1);
                 inserir(&cabeca,num2/num1);
                 break;
-        
+
             case '*':
                 num1=remover(&cabeca);
                 num2=remover(&cabeca);
@@ -58,7 +59,7 @@ int main(void)
                 inserir(&cabeca,num1);
         }
     }while(*y!='y');
-    
+
     return EXIT_SUCCESS;
 }
 
@@ -100,5 +101,17 @@ int  remover(lista **cabeca, lista *r)
         *cabeca=pl->prox;
     free(pl);
     return;
+}
+
+int tamanho(lista *cabeca)
+{
+    lista *pp=cabeca;
+    int cont=0;
+    while(pp!=NULL)
+    {
+        cont++;
+        pp=pp->prox;
+    }
+    return cont;
 }
 
