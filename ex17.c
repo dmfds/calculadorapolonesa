@@ -9,7 +9,7 @@ typedef struct st_lista
 }lista;
 
 float remover(lista **cabeca);
-void inserir(lista **cabeca, int num1);
+void inserir(lista **cabeca, float c);
 int tamanho(lista *cabeca);
 
 int main(void)
@@ -63,22 +63,23 @@ int main(void)
     return EXIT_SUCCESS;
 }
 
-void inserir(lista **cabeca, int num1)
+void inserir(lista **cabeca, float c)
 {
-    lista *pl=*cabeca;
-    lista *plant=NULL;
-    while(pl!=NULL)
+    lista *pp=*cabeca;
+    pp=malloc(sizeof(lista));
+    pp->numero=c;
+    pp->prox=NULL;
+    if(cabeca == NULL)
     {
-        plant=pl;
-        pl=pl->prox;
+        pp->prox=NULL;
+        *cabeca=pp;
     }
-    pl=malloc(sizeof(lista));
-    pl->numero=num1;
-    pl->prox=NULL;
-    if(plant!=NULL)
-        plant->prox=pl;
     else
-        *cabeca=pl;
+    {        
+        pp->prox=*cabeca;
+        *cabeca=pp;
+    }
+    return;
 }
 
 
