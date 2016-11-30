@@ -38,9 +38,9 @@ int main(void)
 void calculo(void)
 {
     int qnd;
-    char vetor[MAX], *P;
+    char vetor[MAX], *p;
     float n1, n2, n3;
-    lista *cabca=NULL;
+    lista *cabeca=NULL;
 
     printf("\nBem-vindo a Calculadora Polonesa \n");
     printf("Realizar as seguintes operacoes:\n");
