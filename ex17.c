@@ -97,6 +97,24 @@ void calculo(void)
             }
         }
 
+        /*comando operacao MULTIPLICAO*/
+        else if((!strcmp(vetor, "*")))
+        {
+            qnd=tamanho(cabeca);
+            if(qnd==1)
+            {
+                printf("Nao foi possivel realizar a operacao\n");
+                return;
+            }
+            else
+            {
+                n1=remover(&cabeca);
+                n2=remover(&cabeca);
+                n3=n1*n2;
+                inserir(&cabeca,n3);
+            }
+        }
+
     }while
 }
 
