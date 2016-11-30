@@ -14,6 +14,7 @@ float remover(lista **cabeca);/*retira o primeiro item na lista e retorna seu va
 void inserir(lista **cabeca, float c);/*acrescenta o item no comeco da lsta*/
 int tamanho(lista *cabeca);/*retorna quantidade de itens na lista*/
 void exibir(lista *cabeca);/*mostra os itens na lista*/
+void calculo(void);
 
 int main(void)
 {
@@ -22,7 +23,7 @@ int main(void)
     /*saira quando o usuario colocar Y*/
     do
     {
-        /*calculo();*/
+        calculo();
         printf("Deseja Continuar?\n");
         printf("y-sim\n");
         printf("n-não\n");
