@@ -115,6 +115,39 @@ void calculo(void)
             }
         }
 
+        /*comando operacao DIVISAO*/
+        else if((!strcmp(vetor, "/")))
+        {
+            qnd=tamanho(cabeca);
+            if(qnd==1)
+            {
+                printf("Nao foi possivel realizar a operacao\n");
+                return;
+            }
+            else
+            {
+                n1=remover(&cabeca);
+                n2=remover(&cabeca);
+                n3=n2/n1;
+                inserir(&cabeca,n3);
+            }
+        }
+        
+        else if((!strcmp(vetor, "=")))
+        {
+            if(cabeca!=NULL)
+            {
+                exibir(cabeca);
+                return;
+            }
+            else
+                return;
+        }
+
+        /*Se string apresentar numeros, insere na lista*/
+        else
+            inserir(&cabeca, atof(vetor));
+
     }while
 }
 
