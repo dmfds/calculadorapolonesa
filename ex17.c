@@ -148,7 +148,7 @@ void calculo(void)
         else
             inserir(&cabeca, atof(vetor));
 
-    }while
+    }while((strcmp(vetor, "="))); /* condicao de parada */
 }
 
 void inserir(lista **cabeca, float c)
