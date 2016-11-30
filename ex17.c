@@ -81,13 +81,13 @@ void calculo(void)
         /*comando opercao SUBTRACAO*/
         else if((!strcmp(vetor, "-")))
         {
-            qnd=tamanho(cabeca);
+            qnd=tamanho(cabeca); /*se qnd de itens=1, resultado sera seu valor negativo*/
             if(qnd==1)
             {
                 n1=remover(&cabeca);
                 n1*=-1;
                 inserir(&cabeca, n1);
-            }
+            } /*qnd de elementos!=1*/
             else
             {
                 n1=remover(&cabeca);
