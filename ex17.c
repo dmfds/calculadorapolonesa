@@ -57,6 +57,25 @@ void calculo(void)
    
     do
     {
+        fgets(vetor, MAX, stdin);
+        if((p=strchr(vetor, '\n'))) *p='\0';
+         
+        /*comando opercao SOMA*/
+        if((!strcmp(vetor, "+")))
+        {
+            qnd=tamanho(cabeca);
+            if(qnd==1)
+            {
+                printf("Nao possivel realizar a operacao\n");
+                return;
+            }
+            else
+            {
+                n1=remover(&cabeca);
+                n2=remover(&cabeca);
+                n3=n1+n2;
+                inserir(&cabeca, n3);
+            }
 
     }while
 }
