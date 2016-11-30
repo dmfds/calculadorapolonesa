@@ -47,8 +47,14 @@ void calculo(void)
     printf("Soma + \n");
     printf("Subtracao - \n");
     printf("Multiplicacao *");
-    printf("Divisao / \n")
+    printf("Divisao / \n");
 
+    printf("Para realizar as operacoes digite primeiro os numeros e depois  os operadores e por ultimo = \n");
+    printf("EX\n");
+    printf("2 <enter> 2 <enter> +<enter> =<enter>\n");
+    printf("Será 2+2=4\n");
+    printf("Vamos comecar!!!\n");
+   
     do
     {
 
