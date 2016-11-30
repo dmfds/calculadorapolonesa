@@ -35,6 +35,26 @@ int main(void)
     return EXIT_SUCCESS;
 }
 
+void calculo(void)
+{
+    int qnd;
+    char vetor[MAX], *P;
+    float n1, n2, n3;
+    lista *cabca=NULL;
+
+    printf("\nBem-vindo a Calculadora Polonesa \n");
+    printf("Realizar as seguintes operacoes:\n");
+    printf("Soma + \n");
+    printf("Subtracao - \n");
+    printf("Multiplicacao *");
+    printf("Divisao / \n")
+
+    do
+    {
+
+    }while
+}
+
 void inserir(lista **cabeca, float c)
 {
     lista *pp=*cabeca;
